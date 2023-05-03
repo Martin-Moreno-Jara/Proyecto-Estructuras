@@ -1,38 +1,37 @@
 import DataClasses.*;
 import DataStructures.*;
+import Output.*;
 
-import java.text.Normalizer;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) {
         long startTime = System.nanoTime();
+        Presentation.welcome();
+        DynamicArray<Usuario> usuarios = new DynamicArray<>();
+        DoublyLinkedList<Usuario> usuarios2 = new DoublyLinkedList<>();
+        DynamicArray<Formulario> formularios = new DynamicArray<>();
+        DoublyLinkedList<Formulario> formularios2 = new DoublyLinkedList<>();
 
-        DynamicArray<String> array = new DynamicArray<>();
-       array.pushFront("a");
-       array.pushBack("z");
-       array.popFront();
-       array.printString();
-        System.out.println(array.contains("z"));
+        System.out.println();
+        System.out.println("Prueba lectura csv");
+        System.out.println("-------------------------------------------------------------");
 
-        DynamicArray<Usuario> users = new DynamicArray<>();
-        users.pushFront(new Usuario("Jose","Martinez","josmart@unal.edu.co","123"));
-        users.printString();
+        ReadCSV reader = new ReadCSV();
 
-        DoublyLinkedList<String> listaEnlazada = new DoublyLinkedList<>();
-        listaEnlazada.addFirst("l");
-        listaEnlazada.printList();
+        usuarios= reader.fillUserArray("C:\\Users\\Hexaw\\Downloads\\MOCK_DATA.csv");
+        usuarios2 = reader.fillUserLinked("C:\\Users\\Hexaw\\Downloads\\MOCK_DATA.csv");
 
-        DoublyLinkedList<Formulario> form = new DoublyLinkedList<>();
-        form.addFirst(new Formulario(1,"Jose","Hernandez",102344,31030123,"M",13,"uno","3","muchos","paso","correo"));
-        form.isEmpty();
-        form.printList();
-        for(int j=1;j<=10000;j++){
-            String myString = String.valueOf(j);
-            array.pushBack(myString);
-            listaEnlazada.addLast(myString);
-        }
-        listaEnlazada.printList();
+        formularios= reader.fillFormArray("C:\\Users\\Hexaw\\Downloads\\formsTenThousand.csv");
+        formularios2 = reader.fillFormLinked("C:\\Users\\Hexaw\\Downloads\\forms.csv");
+
+        //formularios.printString();
+        formularios2.printList();
+
+       // usuarios.printString();
+
+       usuarios2.printList();
+
         long endTime = System.nanoTime();
 
         long elapsedTime = endTime - startTime;

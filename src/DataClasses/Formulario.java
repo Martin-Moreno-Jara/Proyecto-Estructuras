@@ -1,21 +1,21 @@
 package DataClasses;
 
 public class Formulario {
-    public int id_form;
+    public String id_form;
     public String nombre;
     public String apellido;
-    public int cedula;
-    public int telefono;
+    public String cedula;
+    public String telefono;
     public String genero;
-    public int edad;
+    public String edad;
     public String tipo_de_acoso;
     public String frecuencia;
     public String ejercido_por;
     public String descripcion;
     public String forma_de_contacto;
 
-    public Formulario(int id_form, String nombre, String apellido, int cedula,
-                      int telefono, String genero, int edad, String tipo_de_acoso,
+    public Formulario(String id_form, String nombre, String apellido, String cedula,
+                      String telefono, String genero, String edad, String tipo_de_acoso,
                       String frecuencia, String ejercido_por, String descripcion, String forma_de_contacto )
     {
         this.id_form= id_form;
@@ -32,11 +32,11 @@ public class Formulario {
         this.forma_de_contacto=forma_de_contacto;
     }
 
-    public int getId_form() {
+    public String getId_form() {
         return id_form;
     }
 
-    public void setId_form(int id_form) {
+    public void setId_form(String id_form) {
         this.id_form = id_form;
     }
 
@@ -56,19 +56,19 @@ public class Formulario {
         this.apellido = apellido;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -80,11 +80,11 @@ public class Formulario {
         this.genero = genero;
     }
 
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 

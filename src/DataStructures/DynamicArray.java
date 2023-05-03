@@ -3,7 +3,7 @@ package DataStructures;
 public class DynamicArray<T> {
     int capacity;
     T[] list;
-    int size;
+    public int size;
     int index;
 
     //constructors------------------------------------
