@@ -85,6 +85,16 @@ public class DoublyLinkedList<E> {
         size--;
         return temp.data;
     }
+    public boolean contains(E data) {
+        Node<E> current = head;
+        while (current != null) {
+            if (current.data.equals(data)) {
+                return true;
+            }
+            current = current.next;
+        }
+   return false;
+    }
 
     public void printList() {
         Node<E> current = head;

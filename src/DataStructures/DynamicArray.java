@@ -4,7 +4,7 @@ public class DynamicArray<T> {
     int capacity;
     T[] list;
     public int size;
-    int index;
+
 
     //constructors------------------------------------
     public DynamicArray(int cap) {
@@ -91,12 +91,12 @@ public class DynamicArray<T> {
         }
         return aux;
     }
-    public T contains(T element) {
-        T returnedValue = null;
+    public boolean contains(T element) {
+        boolean returnedValue = false;
         if (!isEmpty()) {
             for (int i = 0; i <this.size; i++) {
                 if (this.list[i] == element) {
-                    returnedValue = this.list[i];
+                    returnedValue = true;
                     i=this.size;
                 }
             }

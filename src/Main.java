@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) {
-        long startTime = System.nanoTime();
+
         
         Presentation.welcome();
         DynamicArray<Formulario> MilFormulariosArray = new DynamicArray<>();
@@ -21,6 +21,8 @@ public class Main {
         System.out.println();
         System.out.println("Prueba lectura csv");
         System.out.println("-------------------------------------------------------------");
+
+
         //-----------------------------------------instanciación de pruebas
 
         ReadCSV reader = new ReadCSV();
@@ -37,7 +39,9 @@ public class Main {
         MillonFormulariosLinked = reader.fillFormLinked("C:\\Users\\Hexaw\\Downloads\\formsMillion.csv");
         //---------------------------------------------------------------------------------------------------------------
 
+
         //----------------------------------------------------Impresión de listas cosulta todos los datos---------------------------------------
+
         //MilFormulariosArray.printString();
         //MilFormulariosLinked.printList();
 
@@ -48,9 +52,37 @@ public class Main {
         //CienMilFormulariosLinked.printList();
 
         //MillonFormulariosArray.printString();
-        //MillonFormulariosLinked.printList();
+        MillonFormulariosLinked.printList();
         //--------------------------------------------------------------------------------------------------------------
 
+        //------------------------------------------------Insersión de un solo dato
+        //MilFormulariosArray.pushBack(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
+        //MilFormulariosLinked.addLast(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
+
+        //DiezMilFormulariosArray.pushBack(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
+        //DiezMilFormulariosLinked.addLast(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
+
+        //CienMilFormulariosArray.pushBack(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
+        //CienMilFormulariosLinked.addLast(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
+
+        //MillonFormulariosArray.pushBack(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
+        MillonFormulariosLinked.addLast(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
+        //------------------------------------------------------------------------------------------------------------------
+        long startTime = System.nanoTime();//empieza medir el tiempo
+
+        //----------------------------------------------Eliminación de un solo dato
+        //MilFormulariosArray.popBack();
+        //MilFormulariosLinked.removeLast();
+
+        //DiezMilFormulariosArray.popBack();
+        //DiezMilFormulariosLinked.removeLast();
+
+        //CienMilFormulariosArray.popBack();
+        //CienMilFormulariosLinked.removeLast();
+
+        //MillonFormulariosArray.popBack();
+        MillonFormulariosLinked.removeLast();
+        //------------------------------------------------------------------------------------------------------------------------------------
 
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
