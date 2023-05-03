@@ -91,12 +91,12 @@ public class DynamicArray<T> {
         }
         return aux;
     }
-    public boolean contains(T element) {
-        boolean returnedValue = false;
+    public T contains(T element) {
+        T returnedValue = null;
         if (!isEmpty()) {
             for (int i = 0; i <this.size; i++) {
                 if (this.list[i] == element) {
-                    returnedValue = true;
+                    returnedValue = this.list[i];
                     i=this.size;
                 }
             }
