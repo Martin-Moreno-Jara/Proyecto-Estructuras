@@ -2,6 +2,7 @@ package DataClasses;
 
 import DataStructures.DoublyLinkedList;
 import DataStructures.DynamicArray;
+import DataStructures.Queue;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -19,6 +20,40 @@ public class ReadCSV {
                 partes = linea.split(",");
                 Usuario user = createUser();
                 usuarios.pushBack(user);
+            }
+            lector.close();
+            linea=null;
+            partes=null;
+        }catch (Exception e){
+            System.out.println("Error at: "+e);
+        }
+        return usuarios;
+    }
+    public Queue<Formulario> fillFormQueue(String ruta){
+        Queue<Formulario> formularios = new Queue<>();
+        try{
+            lector = new BufferedReader(new FileReader(ruta));
+            while((linea=lector.readLine())!=null){
+                partes = linea.split(",");
+                Formulario form = createForm();
+                formularios.enqueue(form);
+            }
+            lector.close();
+            linea=null;
+            partes=null;
+        }catch (Exception e){
+            System.out.println("Error at: "+e);
+        }
+        return formularios;
+    }
+    public Queue<Usuario> fillUserQueue(String ruta){
+        Queue<Usuario> usuarios = new Queue<>();
+        try{
+            lector = new BufferedReader(new FileReader(ruta));
+            while((linea=lector.readLine())!=null){
+                partes = linea.split(",");
+                Usuario user = createUser();
+                usuarios.enqueue(user);
             }
             lector.close();
             linea=null;

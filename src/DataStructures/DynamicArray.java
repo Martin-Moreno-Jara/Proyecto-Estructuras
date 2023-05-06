@@ -1,5 +1,7 @@
 package DataStructures;
 
+import DataClasses.Formulario;
+
 public class DynamicArray<T> {
     int capacity;
     T[] list;
@@ -91,17 +93,31 @@ public class DynamicArray<T> {
         }
         return aux;
     }
-    public boolean contains(T element) {
+    public boolean contains(String element) {
         boolean returnedValue = false;
         if (!isEmpty()) {
             for (int i = 0; i <this.size; i++) {
-                if (this.list[i] == element) {
+                if (this.list[i].toString().equals(element)) {
                     returnedValue = true;
-                    i=this.size;
+                    break;
                 }
             }
         }
         return returnedValue;
+    }
+    public void update(String old, String newData){
+        if (!isEmpty()) {
+            for (int i = 0; i <this.size; i++) {
+                if (this.list[i].toString().equals(old)) {
+                    if(this.list[i] instanceof Formulario){
+                        Formulario reemplazo = (Formulario) this.list[i];
+                        reemplazo.descripcion=newData;
+                        this.list[i]=(T)reemplazo;
+                    }
+                }
+
+                }
+            }
     }
 
     public void printString(){

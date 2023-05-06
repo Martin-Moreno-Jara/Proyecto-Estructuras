@@ -1,5 +1,9 @@
 package DataStructures;
 
+import DataClasses.Formulario;
+
+import java.text.Normalizer;
+
 public class DoublyLinkedList<E> {
 
     private Node<E> head;
@@ -85,15 +89,28 @@ public class DoublyLinkedList<E> {
         size--;
         return temp.data;
     }
-    public boolean contains(E data) {
+    public boolean contains(String data) {
         Node<E> current = head;
         while (current != null) {
-            if (current.data.equals(data)) {
+            if (current.data.toString().equals(data)) {
                 return true;
             }
             current = current.next;
         }
    return false;
+    }
+    public void update(String data,String newData){
+        Node<E> current = head;
+        while (current != null) {
+            if (current.data.toString().equals(data)) {
+                if(current.data instanceof Formulario ){
+                    Formulario reemplazo = (Formulario) current.data;
+                    reemplazo.descripcion=newData;
+                    current.data =(E)reemplazo;
+                }
+            }
+            current = current.next;
+        }
     }
 
     public void printList() {
@@ -103,6 +120,5 @@ public class DoublyLinkedList<E> {
             current = current.next;
         }
         System.out.println();
-
     }
 }
