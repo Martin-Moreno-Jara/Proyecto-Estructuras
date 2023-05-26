@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class formGUI extends JFrame{
-    private JLabel label;
     private JPanel mipanel;
     private JButton enviarButton;
     private JTextField textField1;
@@ -19,6 +18,7 @@ public class formGUI extends JFrame{
     private JTextField textField8;
     private JTextArea textArea1;
     private JComboBox comboBox2;
+    private JButton cerrarSesiónButton;
 
     public formGUI(){
         setContentPane(mipanel);
@@ -31,7 +31,14 @@ public class formGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                test test = new test();
+                login test = new login();
+            }
+        });
+        cerrarSesiónButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                login login = new login();
             }
         });
     }

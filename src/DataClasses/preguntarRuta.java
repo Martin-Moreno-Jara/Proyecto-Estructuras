@@ -65,6 +65,7 @@ public class preguntarRuta extends JDialog {
             close=1;
             formGUI form = new formGUI();
         }else if(ruta==2){
+            listsGUI listas = new listsGUI();
             System.out.println("ventana no hecha todavia");
             close=1;
         }else{

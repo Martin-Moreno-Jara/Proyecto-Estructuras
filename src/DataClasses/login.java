@@ -4,19 +4,20 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class test extends JFrame{
+public class login extends JFrame{
     private JPanel panelMain;
-    private JLabel myLabel;
     private JLabel lbName;
     private JTextField textField1;
     private JPasswordField passwordField1;
     private JButton entrarButton;
     private JButton registrarseButton;
+    private JPanel loginPanel;
+    private JPanel panelHeader;
 
-    public test(){
+    public login(){
         setContentPane(panelMain);
         setTitle("UN campus sin acoso");
-        setSize(500,500);
+        setSize(500,300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setLocationRelativeTo(null);
