@@ -1,11 +1,14 @@
 import DataClasses.*;
 import DataStructures.*;
 
+import java.util.concurrent.TimeUnit;
+
 public class Main {
+
     public static void main(String[] args) {
 
 
-        DynamicArray<Formulario> MilFormulariosArray = new DynamicArray<>();
+
         DoublyLinkedList<Formulario> MilFormulariosLinked = new DoublyLinkedList<>();
         DynamicArray<Formulario> DiezMilFormulariosArray = new DynamicArray<>();
         DoublyLinkedList<Formulario> DiezMilFormulariosLinked = new DoublyLinkedList<>();
@@ -26,31 +29,31 @@ public class Main {
 
         //-----------------------------------------instanciación de pruebas
 
-        ReadCSV reader = new ReadCSV();
-        //MilFormulariosArray =reader.fillFormArray("C:\\Users\\Hexaw\\Downloads\\formsThousand.csv");
-        //MilFormulariosLinked= reader.fillFormLinked("C:\\Users\\Hexaw\\Downloads\\formsThousand.csv");
-        MilFormulariosQueue = reader.fillFormQueue("C:\\Users\\Hexaw\\Downloads\\formsThousand.csv");
 
-        //DiezMilFormulariosArray = reader.fillFormArray("C:\\Users\\Hexaw\\Downloads\\formsTenThousand.csv");
+        //
+        //MilFormulariosLinked= reader.fillFormLinked("C:\\Users\\Hexaw\\Downloads\\formsThousand.csv");
+        //MilFormulariosQueue = reader.fillFormQueue("C:\\Users\\Hexaw\\Downloads\\formsThousand.csv");
+
+        //DiezMilFormulariosArray = reader.fillFormArray();
         //DiezMilFormulariosLinked = reader.fillFormLinked("C:\\Users\\Hexaw\\Downloads\\formsTenThousand.csv");
         //DiezMilFormulariosQueue = reader.fillFormQueue("C:\\Users\\Hexaw\\Downloads\\formsTenThousand.csv");
 
-        //CienMilFormulariosArray = reader.fillFormArray("C:\\Users\\Hexaw\\Downloads\\formsHundredThousand.csv");
+        //CienMilFormulariosArray = reader.fillFormArray("");
         //CienMilFormulariosLinked = reader.fillFormLinked("C:\\Users\\Hexaw\\Downloads\\formsHundredThousand.csv");
         //CienMilFormulariosQueue = reader.fillFormQueue("C:\\Users\\Hexaw\\Downloads\\formsHundredThousand.csv");
 
         //MillonFormulariosArray = reader.fillFormArray("C:\\Users\\Hexaw\\Downloads\\formsMillion.csv");
         //MillonFormulariosLinked = reader.fillFormLinked("C:\\Users\\Hexaw\\Downloads\\formsMillion.csv");
-        //MillonFormulariosQueue = reader.fillFormQueue("C:\\Users\\Hexaw\\Downloads\\formsMillion.csv");
+        //MillonFormulariosQueue = reader.fillFormQueue("");
         //---------------------------------------------------------------------------------------------------------------
 
 
         //----------------------------------------------------Impresión de listas cosulta todos los datos---------------------------------------
         System.out.println("CONSULTA");
 
-        //MilFormulariosArray.printString();
+        //
         //MilFormulariosLinked.printList();
-        MilFormulariosQueue.print();
+        //MilFormulariosQueue.print();
 
         //DiezMilFormulariosArray.printString();
         //DiezMilFormulariosLinked.printList();
@@ -67,7 +70,6 @@ public class Main {
 
         //------------------------------------------------Insersión de un solo dato
         System.out.println("INSERCIÓN");
-        //MilFormulariosArray.pushFront(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
         // DiezMilFormulariosArray.pushFront(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
         //CienMilFormulariosArray.pushFront(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
         //MillonFormulariosArray.pushFront(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
@@ -136,7 +138,7 @@ public class Main {
         //------------------------------------------------------------------- Busqueda de un solo dato.
         System.out.println("BUSQUEDA DE UN DATO");
 
-        //boolean busquedaArray = MilFormulariosArray.contains("Sriwing");
+        //
         //boolean busquedaLinked = MilFormulariosLinked.contains("Sriwing");
         boolean busquedaQueue = MilFormulariosQueue.contains("Sriwing");
 
@@ -160,7 +162,7 @@ public class Main {
 
         //----------------------------------------Actualizacion
         System.out.println("ACTUALIZACIÓN");
-        //MilFormulariosArray.update("descripcion","lizard");
+        //;
         //MilFormulariosLinked.update("descripcion","lizard");
         MilFormulariosQueue.update("Sindangrasa","lizard");
         MilFormulariosQueue.print();
@@ -178,17 +180,10 @@ public class Main {
         //MillonFormulariosLinked.update("descripcion","lizard");
         //MillonFormulariosQueue.update("descripcion","lizard");
 
-/*
-        long startTime = System.nanoTime();//empieza medir el tiempo
-        long endTime = System.nanoTime();
-        long elapsedTime = endTime - startTime;
-        long elapsedTimeMillis = TimeUnit.NANOSECONDS.toMillis(elapsedTime);
-        System.out.println();
-        System.out.println("Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos");*/
 
 
 
-        //login test = new login();
+
         LoginGUI test = new LoginGUI();
 
 

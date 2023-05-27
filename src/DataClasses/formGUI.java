@@ -23,7 +23,7 @@ public class formGUI extends JFrame{
     public formGUI(){
         setContentPane(mipanel);
         setTitle("Formulario");
-        setSize(500,500);
+        setSize(600,500);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setLocationRelativeTo(null);

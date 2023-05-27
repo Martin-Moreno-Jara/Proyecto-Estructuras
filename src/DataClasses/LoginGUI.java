@@ -22,13 +22,14 @@ public class LoginGUI extends JFrame{
     private JPanel panelInstruccion;
     private JPanel panelFrase;
     private JPanel panelMain;
-
+    private JButton verCasosDePruebaButton;
 
 
     public LoginGUI() {
     setContentPane(panelMain);
     setTitle("UN campus sin acoso");
-    setSize(630,250);
+    setSize(630,350);
+    setResizable(false);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setVisible(true);
     setLocationRelativeTo(null);
@@ -74,6 +75,13 @@ public class LoginGUI extends JFrame{
                 super.mouseExited(e);
                 registrarseButton.setBackground(new Color(238,238,238));
                 registrarseButton.setForeground(Color.black);
+            }
+        });
+        verCasosDePruebaButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                PruebasGUI pruebas = new PruebasGUI();
+                setVisible(false);
             }
         });
     }
