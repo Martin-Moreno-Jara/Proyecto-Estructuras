@@ -31,14 +31,14 @@ public class formGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                login test = new login();
+                LoginGUI login = new LoginGUI();
             }
         });
         cerrarSesiónButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                login login = new login();
+                LoginGUI login = new LoginGUI();
             }
         });
     }

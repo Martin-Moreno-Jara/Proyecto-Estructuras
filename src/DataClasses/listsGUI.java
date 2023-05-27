@@ -21,7 +21,7 @@ public class listsGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                login login = new login();
+                LoginGUI login = new LoginGUI();
             }
         });
     }

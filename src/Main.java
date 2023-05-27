@@ -188,7 +188,8 @@ public class Main {
 
 
 
-        login test = new login();
+        //login test = new login();
+        LoginGUI test = new LoginGUI();
 
 
     }
