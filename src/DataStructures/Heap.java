@@ -3,7 +3,7 @@ package DataStructures;
 public class Heap {
     private int maxSize;
     private int size;
-    private int[] heap;
+    public int[] heap;
 
     public Heap(int maxSize) {
         this.maxSize = maxSize;
@@ -101,6 +101,15 @@ public class Heap {
             System.out.print(heap[i] + " ");
         }
         System.out.println();
+    }
+    public void buildHeap(int[] array) {
+        size = array.length;
+        heap = new int[maxSize];
+        System.arraycopy(array, 0, heap, 0, size);
+
+        for (int i = size / 2; i >= 0; i--) {
+            siftDown(i);
+        }
     }
 
 }

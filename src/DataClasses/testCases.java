@@ -228,10 +228,11 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String AVLConsultar(String ruta){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         AVLTree<Formulario> avl;
         ReadCSV reader = new ReadCSV();
         avl =reader.fillFormAVL(ruta);
+        long startTime = System.nanoTime();
         avl.printInOrder(avl.root);
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -240,10 +241,11 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String AVLInsertar(String ruta){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         AVLTree<Formulario> avl;
         ReadCSV reader = new ReadCSV();
         avl =reader.fillFormAVL(ruta);
+        long startTime = System.nanoTime();
         avl.insert(new Formulario("1","M","J","123","1234","F","32","A","B","X","R","G"));
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -251,10 +253,11 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String AVLEliminar(String ruta){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         AVLTree<Formulario> avl;
         ReadCSV reader = new ReadCSV();
         avl =reader.fillFormAVL(ruta);
+        long startTime = System.nanoTime();
         avl.delete("A dos Cunhados");
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -262,10 +265,11 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String AVLBuscar(String ruta){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         AVLTree<Formulario> avl;
         ReadCSV reader = new ReadCSV();
         avl =reader.fillFormAVL(ruta);
+        long startTime = System.nanoTime();
         boolean busquedaArray = avl.find("A dos Cunhados");
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -273,10 +277,11 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String AVLctualizar(String ruta){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         AVLTree<Formulario> avl;
         ReadCSV reader = new ReadCSV();
         avl =reader.fillFormAVL(ruta);
+        long startTime = System.nanoTime();
         avl.update("A dos Cunhados",new Formulario("1","X","J","123","1234","F","32","A","B","X","A dos","G"));
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -295,11 +300,24 @@ public class testCases {
         long elapsedTimeMillis = TimeUnit.NANOSECONDS.toMillis(elapsedTime);
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
-    public static String HeapInsert(int testSize){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+    public static String heapSort(int testSize){
         Heap heap;
         ReadCSV reader = new ReadCSV();
         heap =reader.fillHeap(testSize);
+        int[] array = reader.buildArray(testSize);
+        long startTime = System.nanoTime();
+        heap.buildHeap(array);
+        long endTime = System.nanoTime();
+        long elapsedTime = endTime - startTime;
+        long elapsedTimeMillis = TimeUnit.NANOSECONDS.toMillis(elapsedTime);
+        return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
+    }
+    public static String HeapInsert(int testSize){
+        //empieza medir el tiempo
+        Heap heap;
+        ReadCSV reader = new ReadCSV();
+        heap =reader.fillHeap(testSize);
+        long startTime = System.nanoTime();
         heap.insert(testSize+1);
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -307,10 +325,11 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String HeapConsultar(int testSize){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         Heap heap;
         ReadCSV reader = new ReadCSV();
         heap =reader.fillHeap(testSize);
+        long startTime = System.nanoTime();
         heap.printHeap();
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -318,10 +337,11 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String HeapExtractMax(int testSize){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         Heap heap;
         ReadCSV reader = new ReadCSV();
         heap =reader.fillHeap(testSize);
+        long startTime = System.nanoTime();
         heap.extractMax();
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -329,10 +349,11 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String HeapRemove(int testSize){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         Heap heap;
         ReadCSV reader = new ReadCSV();
         heap =reader.fillHeap(testSize);
+        long startTime = System.nanoTime();
         heap.remove(10);
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -340,10 +361,11 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String HeapChangePriority(int testSize){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         Heap heap;
         ReadCSV reader = new ReadCSV();
         heap =reader.fillHeap(testSize);
+        long startTime = System.nanoTime();
         heap.changePriority(0,5);
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
@@ -360,16 +382,31 @@ public class testCases {
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
     public static String setUnionFind(int testSize){
-        long startTime = System.nanoTime();//empieza medir el tiempo
+        //empieza medir el tiempo
         ReadCSV reader = new ReadCSV();
         DisjointSet[] d =reader.fillSet(testSize);
-        DisjointSet x=d[testSize-500];
-        x.union(1,d.length-600);
-        int find =x.find(d.length-600);
+        DisjointSet x=d[testSize-4];
+        long startTime = System.nanoTime();
+        x.union(1,d.length-5);
+        int find =x.find(d.length-5);
         System.out.println(find);
         long endTime = System.nanoTime();
         long elapsedTime = endTime - startTime;
         long elapsedTimeMillis = TimeUnit.NANOSECONDS.toMillis(elapsedTime);
         return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
     }
+    public static String setUFind(int testSize){
+        //empieza medir el tiempo
+        ReadCSV reader = new ReadCSV();
+        DisjointSet[] d =reader.fillSet(testSize);
+        DisjointSet x=d[testSize-5];
+        long startTime = System.nanoTime();
+        int find =x.find(d.length-6);
+        System.out.println(find);
+        long endTime = System.nanoTime();
+        long elapsedTime = endTime - startTime;
+        long elapsedTimeMillis = TimeUnit.NANOSECONDS.toMillis(elapsedTime);
+        return "Tiempo de ejecución: " + elapsedTimeMillis + " milisegundos y "+ elapsedTime+" nanosegundos";
+    }
+
 }

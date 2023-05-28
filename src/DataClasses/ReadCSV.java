@@ -147,12 +147,18 @@ public class ReadCSV {
         }
         return heap;
     }
+    public int[] buildArray(int testSize){
+        int[] array = new int[testSize];
+        for(int i=0;i<testSize;i++){
+            array[i]=i;
+        }
+        return array;
+    }
     public DisjointSet[] fillSet(int testSize){
         DisjointSet[] D = new DisjointSet[testSize];
-        DoublyLinkedList<DisjointSet> sets = new DoublyLinkedList<>();
         for(int i=0;i<testSize;i++){
             DisjointSet set = new DisjointSet(i);
-            //sets.addLast(set);
+            System.out.println(i);
             D[i]=set;
         }
         return D;
