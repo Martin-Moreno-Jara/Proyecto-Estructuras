@@ -1,8 +1,6 @@
 package DataClasses;
 
-import DataStructures.DoublyLinkedList;
-import DataStructures.DynamicArray;
-import DataStructures.Queue;
+import DataStructures.*;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -124,5 +122,29 @@ public class ReadCSV {
     public Formulario createForm(){
         Formulario form = new Formulario(partes[0],partes[1],partes[2],partes[3],partes[4],partes[5],partes[6],partes[7],partes[8],partes[9],partes[10],partes[11]);
         return form;
+    }
+    public AVLTree<Formulario> fillFormAVL(String ruta){
+        AVLTree<Formulario> formularios = new AVLTree<>();
+        try{
+            lector = new BufferedReader(new FileReader(ruta));
+            while((linea=lector.readLine())!=null){
+                partes = linea.split(",");
+                Formulario form = createForm();
+                formularios.insert(form);
+            }
+            lector.close();
+            linea=null;
+            partes=null;
+        }catch (Exception e){
+            System.out.println("Error at: "+e);
+        }
+        return formularios;
+    }
+    public Heap fillHeap(int testSize){
+        Heap heap = new Heap(testSize+3);
+        for(int i=0;i<=testSize;i++){
+            heap.insert(i);
+        }
+        return heap;
     }
 }

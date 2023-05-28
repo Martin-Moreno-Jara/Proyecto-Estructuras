@@ -1,6 +1,6 @@
 package DataClasses;
 
-public class Formulario {
+public class Formulario implements Comparable<Formulario> {
     public String id_form;
     public String nombre;
     public String apellido;
@@ -131,5 +131,9 @@ public class Formulario {
     @Override
     public String toString(){
         return this.descripcion;
+    }
+    @Override
+    public int compareTo(Formulario otroFormulario) {
+        return this.descripcion.compareTo(otroFormulario.descripcion);
     }
 }

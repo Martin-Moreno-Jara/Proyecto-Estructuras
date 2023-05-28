@@ -229,6 +229,59 @@ public class PruebasGUI extends JFrame{
                 }else if(Queue.isSelected() && millon.isSelected() && actualizaciónRadioButton.isSelected()){
                     paneResultados.setText(testCases.QueueActualizar(testCases.dirMillonDatos));
                 }
+                // AVL
+                if(AVL.isSelected() && mil.isSelected() && creaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLCrear(testCases.dirMilDatos));
+                }else if(AVL.isSelected() && mil.isSelected() && consultaRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLConsultar(testCases.dirMilDatos));
+                }else if(AVL.isSelected() && mil.isSelected() && inserciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLInsertar(testCases.dirMilDatos));
+                }else if(AVL.isSelected() && mil.isSelected() && eliminaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLEliminar(testCases.dirMilDatos));
+                }else if(AVL.isSelected() && mil.isSelected() && busquedaRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLBuscar(testCases.dirMilDatos));
+                }else if(AVL.isSelected() && mil.isSelected() && actualizaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLctualizar(testCases.dirMilDatos));
+                }
+                else if(AVL.isSelected() && diezK.isSelected() && creaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLCrear(testCases.dirDiezMilDatos));
+                }else if(AVL.isSelected() && diezK.isSelected() && consultaRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLConsultar(testCases.dirDiezMilDatos));
+                }else if(AVL.isSelected() && diezK.isSelected() && inserciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLInsertar(testCases.dirDiezMilDatos));
+                }else if(AVL.isSelected() && diezK.isSelected() && eliminaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLEliminar(testCases.dirDiezMilDatos));
+                }else if(AVL.isSelected() && diezK.isSelected() && busquedaRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLBuscar(testCases.dirDiezMilDatos));
+                }else if(AVL.isSelected() && diezK.isSelected() && actualizaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLctualizar(testCases.dirDiezMilDatos));
+                }
+                else if(AVL.isSelected() && cienK.isSelected() && creaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLCrear(testCases.dirCienMilDatos));
+                }else if(AVL.isSelected() && cienK.isSelected() && consultaRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLConsultar(testCases.dirCienMilDatos));
+                }else if(AVL.isSelected() && cienK.isSelected() && inserciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLInsertar(testCases.dirCienMilDatos));
+                }else if(AVL.isSelected() && cienK.isSelected() && eliminaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLEliminar(testCases.dirCienMilDatos));
+                }else if(AVL.isSelected() && cienK.isSelected() && busquedaRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLBuscar(testCases.dirCienMilDatos));
+                }else if(AVL.isSelected() && cienK.isSelected() && actualizaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLctualizar(testCases.dirCienMilDatos));
+                }
+                else if(AVL.isSelected() && millon.isSelected() && creaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLCrear(testCases.dirMillonDatos));
+                }else if(AVL.isSelected() && millon.isSelected() && consultaRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLConsultar(testCases.dirMillonDatos));
+                }else if(AVL.isSelected() && millon.isSelected() && inserciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLInsertar(testCases.dirMillonDatos));
+                }else if(AVL.isSelected() && millon.isSelected() && eliminaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLEliminar(testCases.dirMillonDatos));
+                }else if(AVL.isSelected() && millon.isSelected() && busquedaRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLBuscar(testCases.dirMillonDatos));
+                }else if(AVL.isSelected() && millon.isSelected() && actualizaciónRadioButton.isSelected()){
+                    paneResultados.setText(testCases.AVLctualizar(testCases.dirMillonDatos));
+                }
             }
         });
     }
