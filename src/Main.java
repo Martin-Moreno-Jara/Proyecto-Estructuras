@@ -9,36 +9,50 @@ public class Main {
         System.out.println("-------------------------------------------------------------");
 
 
-        //LoginGUI test = new LoginGUI();
-        AVLTree<String> myTree = new AVLTree<>();
-        /*myTree.insert("a");
-        myTree.insert("x");
-        myTree.insert("b");
-        myTree.printInOrder(myTree.root);
-        myTree.delete("b");
-        System.out.println();
-        myTree.printInOrder(myTree.root);
-        System.out.println(myTree.find("a"));
-        myTree.update("a","t");
-        System.out.println();
-        myTree.printInOrder(myTree.root);*/
+        LoginGUI login = new LoginGUI();
 
+        //HEAP
+        System.out.println(testCases.HeapCrear(1000));
+        System.out.println(testCases.HeapCrear(10000));
+        System.out.println(testCases.HeapCrear(100000));
+        System.out.println(testCases.HeapCrear(1000000));
 
-
-       /* Heap heap = new Heap(10);
-        heap.insert(3);
-        heap.printHeap();
-
-        DisjointSet set = new DisjointSet(10);
-        DisjointSet set2 = new DisjointSet(1);
-        set.union(1,9);
-        System.out.println(set.find(8));*/
-        ReadCSV read = new ReadCSV();
+        System.out.println(testCases.HeapConsultar(1000));
+        System.out.println(testCases.HeapConsultar(10000));
+        System.out.println(testCases.HeapConsultar(100000));
         System.out.println(testCases.HeapConsultar(1000000));
 
+        System.out.println(testCases.HeapInsert(1000));
+        System.out.println(testCases.HeapInsert(10000));
+        System.out.println(testCases.HeapInsert(100000));
+        System.out.println(testCases.HeapInsert(1000000));
+
+        System.out.println(testCases.HeapRemove(1000));
+        System.out.println(testCases.HeapRemove(10000));
+        System.out.println(testCases.HeapRemove(100000));
+        System.out.println(testCases.HeapRemove(1000000));
+
+        System.out.println(testCases.HeapExtractMax(1000));
+        System.out.println(testCases.HeapExtractMax(10000));
+        System.out.println(testCases.HeapExtractMax(100000));
+        System.out.println(testCases.HeapExtractMax(1000000));
+
+        System.out.println(testCases.HeapChangePriority(1000));
+        System.out.println(testCases.HeapChangePriority(10000));
+        System.out.println(testCases.HeapChangePriority(100000));
+        System.out.println(testCases.HeapChangePriority(1000000));
 
 
-
+        //Disjoin SET
+       // System.out.println(testCases.setCreate(1000));
+        //System.out.println(testCases.setCreate(10000));
+        //System.out.println(testCases.setCreate(100000));
+        System.out.println(testCases.setCreate(1000000));
+/*
+        System.out.println(testCases.setUnionFind(1000));
+        System.out.println(testCases.setUnionFind(10000));
+        System.out.println(testCases.setUnionFind(100000));
+        System.out.println(testCases.setUnionFind(1000000));*/
 
     }
 }
